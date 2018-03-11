@@ -13,6 +13,10 @@
     "start:prod": "NODE_ENV=production node dist/server.bundle.js",
     "watch:server": "nodemon ./dist/server.bundle.js --watch ./dist"
   },
+  "repository": {
+    "type" : "git"
+  , "url" : "https://github.com/ollystephens1/node-seed-es6"
+  },
   "author": "Oliver Stephens",
   "license": "ISC",
   "dependencies": {

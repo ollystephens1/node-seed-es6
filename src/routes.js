@@ -1,9 +1,30 @@
 import express from 'express';
+import response from './core/response';
+
 const router = express.Router();
 
 router.get('/api', (req, res) => {
-  const query = req.query;
-  res.send({ query });
+  const data = [
+    {
+      id: 1,
+      name: 'Arsenal'
+    },
+    {
+      id: 2,
+      name: 'Manchester Utd'
+    },
+    {
+      id: 3,
+      name: 'Manchester City'
+    },
+    {
+      id: 4,
+      name: 'Chelsea'
+    }
+  ];
+
+
+  response(res)(data);
 });
 
 router.get('/api/:id', (req, res) => {
