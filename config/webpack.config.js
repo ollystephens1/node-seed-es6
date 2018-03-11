@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var nodeExternals = require('webpack-node-externals');
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
-var ENVIRONMENT = process.env.NODE_ENV;
+var ENV = process.env.NODE_ENV;
 var ROOT = process.cwd();
 var ENTRY = ROOT + '/src/server.js';
 
@@ -11,7 +11,7 @@ var plugins = [
   new webpack.WatchIgnorePlugin([path.resolve(ROOT, 'dist')])
 ];
 
-if (ENVIRONMENT === 'production') {
+if (ENV === 'production') {
   plugins.push(
     new UglifyJsPlugin({
       sourceMap: false,

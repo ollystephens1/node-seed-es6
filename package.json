@@ -2,19 +2,22 @@
   "name": "node-seed-es6",
   "version": "1.0.0",
   "description": "Node.js API seed",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
-    "clean": "rimraf dist/*",
-    "start": "npm-run-all --parallel watch:server build:dev",
-    "build:prod": "NODE_ENV=production npm run clean && webpack --config ./config/webpack.config.js",
     "build:dev": "NODE_ENV=development webpack --config ./config/webpack.config.js --watch",
-    "watch:server": "nodemon ./dist/server.bundle.js --watch ./dist",
+    "build:prod": "npm run clean && NODE_ENV=production webpack --config ./config/webpack.config.js",
+    "clean": "rimraf dist/*",
     "eslint": "./node_modules/.bin/eslint ./src",
-    "precommit": "npm run eslint"
+    "precommit": "npm run eslint",
+    "start": "npm-run-all --parallel watch:server build:dev",
+    "start:prod": "NODE_ENV=production node dist/server.bundle.js",
+    "watch:server": "nodemon ./dist/server.bundle.js --watch ./dist"
   },
   "author": "Oliver Stephens",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "config": "^1.30.0",
     "express": "^4.16.2"
   },
   "devDependencies": {

@@ -66,8 +66,10 @@ module.exports = {
             "error",
             "beside"
         ],
-        "indent": "error",
-        "indent-legacy": "error",
+        "indent": "off",
+        "indent-legacy": [
+            "error", 2
+        ],
         "init-declarations": "error",
         "jsx-quotes": "error",
         "key-spacing": "error",
@@ -89,10 +91,10 @@ module.exports = {
         "max-statements-per-line": "error",
         "multiline-comment-style": "error",
         "multiline-ternary": "error",
-        "new-cap": "error",
+        "new-cap": "off",
         "new-parens": "error",
         "newline-after-var": [
-            "error",
+            "off",
             "always"
         ],
         "newline-before-return": "error",
@@ -191,26 +193,28 @@ module.exports = {
         "no-whitespace-before-property": "error",
         "no-with": "error",
         "nonblock-statement-body-position": "error",
-        "object-curly-newline": "error",
-        "object-curly-spacing": "error",
+        "object-curly-newline": "off",
+        "object-curly-spacing": [
+            "error", "always"
+        ],
         "object-property-newline": "error",
         "object-shorthand": "error",
         "one-var": "off",
         "one-var-declaration-per-line": "error",
         "operator-assignment": "error",
         "operator-linebreak": "error",
-        "padded-blocks": "error",
+        "padded-blocks": "off",
         "padding-line-between-statements": "error",
         "prefer-arrow-callback": "error",
         "prefer-const": "error",
-        "prefer-destructuring": "error",
+        "prefer-destructuring": "off",
         "prefer-numeric-literals": "error",
         "prefer-promise-reject-errors": "error",
         "prefer-reflect": "error",
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "off",
-        "quote-props": "error",
+        "quote-props": "off",
         "quotes": [
             "error",
             "single"
@@ -225,9 +229,9 @@ module.exports = {
             "error",
             "last"
         ],
-        "sort-imports": "error",
-        "sort-keys": "error",
-        "sort-vars": "error",
+        "sort-imports": "off",
+        "sort-keys": "off",
+        "sort-vars": "off",
         "space-before-blocks": "error",
         "space-before-function-paren": "error",
         "space-in-parens": [
