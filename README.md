@@ -24,7 +24,7 @@ Run API production build
 
 For default config (i.e. development), set in ./config/default.json
 
-Production config can be set in ./config/default.json and will be merged with the default config.
+Production config can be set in ./config/production.json and will be merged with the default config.
 
 To access environment config variables, do as follows:
 
