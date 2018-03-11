@@ -1,4 +1,4 @@
-# Node.js API seed (ES& w/ Babel, Webpack & Nodemon)
+# Node.js API seed (ES6 w/ Babel, Webpack & Nodemon)
 
 Quick starter Node API Seed.
 
