@@ -11,3 +11,7 @@ Install dependencies
 Launch API in development mode (with Webpack & Nodemon live reloading)
 
 `npm run start`
+
+Build API for production
+
+`npm run build:prod`
