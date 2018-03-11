@@ -26,4 +26,8 @@ router.delete('/api:id', (req, res) => {
   res.send({ params });
 });
 
+router.get('/', (req, res) => {
+  res.send('This is a Node.js API seed Webpack & Babel with ES6');
+});
+
 export default router;
