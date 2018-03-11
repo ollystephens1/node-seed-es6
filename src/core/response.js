@@ -41,7 +41,7 @@ export default (res, err) => {
 
     res.status(statusCode).send({
       status: statusCode,
-      message: message || setDefaultMessage(success, code),
+      message: message || setDefaultMessage(success, statusCode),
       data
     });
   };
