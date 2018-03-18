@@ -2,7 +2,8 @@
   "server": {
     "port": 3000,
     "host": "localhost",
-    "bodyParserLimit": "50mb"
+    "bodyParserLimit": "50mb",
+    "timeout": "10s"
   },
   "db": {
     "host": "localhost",

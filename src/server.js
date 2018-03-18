@@ -3,6 +3,7 @@ import config from 'config';
 import helmet from 'helmet';
 import logger from 'morgan';
 import compression from 'compression';
+import timeout from 'connect-timeout';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import routes from './routes';
@@ -18,6 +19,7 @@ app.use(bodyParser.json({
   limit: config.get('server.bodyParserLimit')
 }));
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(timeout(config.get('server.timeout')));
 
 app.use('/', routes);
 app.listen(PORT, () => console.log(`Node API running on port ${PORT}`));
