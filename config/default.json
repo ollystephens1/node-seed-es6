@@ -1,4 +1,7 @@
 {
+  "client": {
+    "name": "Seed API"
+  },
   "server": {
     "port": 3000,
     "host": "localhost",
