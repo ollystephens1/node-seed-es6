@@ -34,6 +34,12 @@ To access environment config variables, do as follows:
 
 [Read more](https://www.npmjs.com/package/config)
 
+### Testing
+
+Run Mocha / Chai tests
+
+`npm run test`
+
 ### Deployment with PM2
 
 Once the app is bundled for production, deploy and test with PM2.
