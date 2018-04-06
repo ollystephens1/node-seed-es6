@@ -1,10 +1,17 @@
 import express from 'express';
-import response from './core/response';
+import { resSuccess, resError } from '@core/response';
 
 const router = express.Router();
 
 router.get('/api', (req, res) => {
-  const data = [
+  getData()
+    .then(resSuccess(res))
+    .catch(resError(res));
+});
+
+
+const getData = () => {
+  return Promise.resolve([
     {
       id: 1,
       name: 'Arsenal'
@@ -21,11 +28,8 @@ router.get('/api', (req, res) => {
       id: 4,
       name: 'Chelsea'
     }
-  ];
-
-
-  response(res)(data);
-});
+  ]);
+};
 
 router.get('/api/:id', (req, res) => {
   const params = req.params.id;
