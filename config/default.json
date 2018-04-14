@@ -9,10 +9,10 @@
     "timeout": "10s"
   },
   "db": {
-    "host": "localhost",
-    "port": 27017,
-    "dbName": "my-db-name",
-    "user": "my-db-user",
-    "pass": "my-db-pass"
+    "service": "mongodb",
+    "provider": "atlas",
+    "cluster": "",
+    "user": "",
+    "pass": ""
   }
 }

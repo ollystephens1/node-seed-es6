@@ -9,7 +9,6 @@ router.get('/api', (req, res) => {
     .catch(resError(res));
 });
 
-
 const getData = () => {
   return Promise.resolve([
     {

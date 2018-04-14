@@ -8,6 +8,7 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import log from '@core/logger';
 import routes from './routes';
+import dbConnect from './db/db';
 
 const PORT = config.get('server.port');
 const CLIENT = config.get('client');
@@ -22,6 +23,8 @@ app.use(bodyParser.json({
 }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(timeout(config.get('server.timeout')));
+
+dbConnect();
 
 app.use('/', routes);
 app.listen(PORT, () => log.info(`${CLIENT.name} running on port ${PORT}`));
