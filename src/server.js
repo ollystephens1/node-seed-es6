@@ -6,6 +6,7 @@ import compression from 'compression';
 import timeout from 'connect-timeout';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
+import './db/models/character';
 import log from '@core/logger';
 import routes from './routes';
 import dbConnect from './db/db';
