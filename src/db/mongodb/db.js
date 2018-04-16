@@ -1,18 +1,18 @@
 import mongoose from 'mongoose';
 import config from 'config';
+import './schemas';
 
 export default function dbConnect() {
   const uri = buildURI();
-  mongoose.connect(uri);
+
+  // Connect to mongodb
+  mongoose.connect(uri).catch((err) => {
+    console.log(`Mongoose connection error: ${err.message}`);
+  });
 
   // Have we connected successsfully?
   mongoose.connection.on('connected', () => {
     console.log(`Successfully connected to ${uri}`);
-  });
-
-  // Something went wrong, show the error
-  mongoose.connection.on('error', (err) => {
-    console.log(`Mongoose connection error: ${err}`);
   });
 
   // Connection ended.

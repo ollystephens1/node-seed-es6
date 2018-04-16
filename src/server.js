@@ -6,10 +6,9 @@ import compression from 'compression';
 import timeout from 'connect-timeout';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
-import './db/models/character';
 import log from '@core/logger';
 import routes from './routes';
-import dbConnect from './db/db';
+import dbConnect from './db/mongodb/db';
 
 const PORT = config.get('server.port');
 const CLIENT = config.get('client');
